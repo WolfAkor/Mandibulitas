@@ -34,7 +34,6 @@ public class Ventana{
 	public static String PROD_NOMBRE (){
 		return JOptionPane.showInputDialog("Escriba el Nombre:");
 	}
-	public static int PROD_ID (){
 		String Num = JOptionPane.showInputDialog("Escriba el ID:");
 		if(Num!=null && !Num.isEmpty()){
 			try{
@@ -58,6 +57,17 @@ public class Ventana{
 		}else
 			return -1f;
 	}
+public static int CLIENTE(Carro car1,Carro car2,Carro car3){
+	int x=JOptionPane.showOptionDialog(null,"Bienvenido\nQuien eres?\n 1)Carro1:"
+				+car1.getNombre()+"("+car1.getItems().getTotal()+")\n2)Carro2:"	
+	   			+car2.getNombre()+"("+car2.getItems().getTotal()+")\n3)Carro3:"
+	   			+car3.getNombre()+"("+car3.getItems().getTotal()+")","Clientes",
+				JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.PLAIN_MESSAGE,null,opciones,opciones[0]);	
+	
+	String[]Opciones={"1","2","3","Regresar"};
+	
+	return x;
+	}//CLIENTE
 	
 	public static void ERROR (String Mensaje){
 		JOptionPane.showMessageDialog(null, Mensaje,"Algo Fallo", JOptionPane.ERROR_MESSAGE);
