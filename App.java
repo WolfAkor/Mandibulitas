@@ -78,6 +78,7 @@ public class App{
 				    Producto ProdAux = Principal.LocProd();
 					int cantidad = Ventana.P_CANTIDAD();
 					CatAux.Agregar(ProdAux, cantidad, Principal);
+					ventana.Mensaje("Producto agregado correctamente");
 					break;
 				}
 			}
