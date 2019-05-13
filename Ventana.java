@@ -62,6 +62,12 @@ public class Ventana{
 	public static void ERROR (String Mensaje){
 		JOptionPane.showMessageDialog(null, Mensaje,"Algo Fallo", JOptionPane.ERROR_MESSAGE);
 	}
+	
+	public static void QuitarItem(){
+		int ProdId = Integer.parseInt(JOptionPane.showInputDialog("Escriba el ID del item a quitar"));
+	        ProdId=Prod.getID();
+		this.ActualizarCantidad(ProdID,(-1)*Existencia(ProdID));
+	}
 }
 
 //int a = JOptionPane.showOptionDialog(null,
