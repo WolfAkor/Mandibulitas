@@ -73,12 +73,23 @@ public class App{
 			    sel = Ventana.CARRO(CarAux);
 				
 				switch(sel){//Agregar ITEM
+					
 					case 0:
-					String Cat = Principal.MostrarCatalogo();
-				    Producto ProdAux = Principal.LocProd();
-					int cantidad = Ventana.P_CANTIDAD();
-					CatAux.Agregar(ProdAux, cantidad, Principal);
+						String Cat = Principal.MostrarCatalogo();
+						Producto ProdAux = Principal.LocProd();
+					        int cantidad = Ventana.P_CANTIDAD();
+					        CatAux.Agregar(ProdAux, cantidad, Principal);
+					        ventana.Mensaje("Producto agregado correctamente");
 					break;
+						
+					case 1:
+						ventana.QuitarItem();
+						ventana.Mensaje("Producto eliminado correctamente");
+				        break;
+						
+					case 2:
+						
+				        break;
 				}
 			}
 			}
