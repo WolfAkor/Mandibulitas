@@ -53,7 +53,7 @@ public class App{
 			Carro CarAux;
 			sel = Ventana.CLIENTE(Car1, Car2, Car3);
 			
-			switch(sel){ //
+			switch(sel){ //Elegir un carrito 
 				
 				case 0:
 				CarAux = Car1;
@@ -73,11 +73,34 @@ public class App{
 			    sel = Ventana.CARRO(CarAux);
 				
 				switch(sel){//Agregar ITEM
+					
 					case 0:
-					String Cat = Principal.MostrarCatalogo();
-				    Producto ProdAux = Principal.LocProd();
-					int cantidad = Ventana.P_CANTIDAD();
-					CatAux.Agregar(ProdAux, cantidad, Principal);
+						String Cat = Principal.MostrarCatalogo();
+						Producto ProdAux = Principal.LocProd();
+					        int cantidad = Ventana.P_CANTIDAD();
+					        CatAux.Agregar(ProdAux, cantidad, Principal);
+					        ventana.Mensaje("Producto agregado correctamente");
+					break;
+						
+					case 1://Quitar del carro
+					    
+				    break;
+						
+					case 2://Cambiar Cantidad
+					   
+					break;
+					
+					case 3://vaciar
+					Catalogo.Vaciar();
+					ventana.Mensaje("Se ha vaciado el carrito");
+					break;
+
+					case 4://checkout
+
+					break;
+
+					case 5://Regresar 
+					Ventana.CLIENTE(Car1, Car2, Car3);
 					break;
 				}
 			}
