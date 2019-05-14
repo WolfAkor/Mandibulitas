@@ -10,7 +10,7 @@ public class App{
 		new Producto("HotWheels",3422,170f,Principal);
 		new Producto("Torta",1212,15f,Principal);
 		new Producto("Martillo",9901,70f,Principal);
-		new Producto("Mini Carro",6745,3000f,Principal);
+		new Producto("StormBreaker",6745,3000f,Principal);
 		Carro Car1 = new Carro("Pancho",10732,Principal);
 		Carro Car2 = new Carro("Angy",10956,Principal);
 		Carro Car3 = new Carro("Rugal",10097,Principal);
@@ -79,11 +79,13 @@ public class App{
 						Producto ProdAux = Principal.LocProd();
 					        int cantidad = Ventana.P_CANTIDAD();
 					        CatAux.Agregar(ProdAux, cantidad, Principal);
-					        ventana.Mensaje("Producto agregado correctamente");
+					        Ventana.MENSAJE("Producto agregado correctamente");
 					break;
 						
 					case 1://Quitar del carro
-					    
+					Poducto ProdAux = Principal.LocProd();
+					CarAux.Quitar(ProdAux, Principal);
+					Ventana.MENSAJE("Producto eliminado correctamente");
 				    break;
 						
 					case 2://Cambiar Cantidad
@@ -91,7 +93,7 @@ public class App{
 					break;
 					
 					case 3://vaciar
-					Catalogo.Vaciar();
+					CarAux.Vaciar(Principal);
 					Ventana.MENSAJE("Se ha vaciado el carrito");
 					break;
 
