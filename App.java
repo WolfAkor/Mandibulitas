@@ -92,7 +92,7 @@ public class App{
 					
 					case 3://vaciar
 					Catalogo.Vaciar();
-					ventana.Mensaje("Se ha vaciado el carrito");
+					Ventana.MENSAJE("Se ha vaciado el carrito");
 					break;
 
 					case 4://checkout
